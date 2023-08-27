@@ -10,3 +10,4 @@ documents.json
 __pycache__
 
 .vscode
+flagged/log.csv

@@ -62,8 +62,13 @@ def chunk_into(list, n_chunks):
 
 
 def unchunk(list_of_lists):
-    """Recombines a list of lists into a single list."""
-    return [item for sublist in list_of_lists for item in sublist]
+    # """Recombines a list of lists into a single list."""
+    return [
+        item
+        for sublist in list_of_lists
+        if not isinstance(sublist, Exception)
+        for item in sublist
+    ]
 
 
 def display_modal_image(image):
